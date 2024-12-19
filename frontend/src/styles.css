@@ -1,0 +1,345 @@
+/* .container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+h1,
+h2,
+h3 {
+  text-align: center;
+}
+
+input[type="text"],
+input[type="email"] {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  padding: 10px 15px;
+  margin: 5px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007BFF;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.contact-list {
+  margin: 20px;
+}
+
+.contact-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.contact-list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.contact-list li span {
+  font-size: 16px;
+}
+
+.contact-list button {
+  margin-left: 10px;
+  padding: 5px 10px;
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.contact-list button:hover {
+  background-color: #e5e5e5;
+}
+
+.contact-list form {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.contact-list input {
+  padding: 5px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.contact-list form button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.contact-list form button:hover {
+  background-color: #45a049;
+}
+
+.contact-list button {
+  background-color: #007bff;
+  color: white;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.contact-list button:hover {
+  background-color: #0069d9;
+}
+
+.contact-list button:nth-child(2) {
+  background-color: #dc3545;
+  color: white;
+}
+
+.contact-list button:nth-child(2):hover {
+  background-color: #c82333;
+}
+
+.duplicates {
+  border: 1px solid #f00;
+  padding: 10px;
+  margin-top: 20px;
+  border-radius: 5px;
+} */
+
+/* Container and layout */
+/* Container and layout */
+/* Container and layout */
+.container {
+  max-width: 1500px;
+  /* Increased the width */
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  font-family: 'Arial', sans-serif;
+  border: 1px solid #ccc;
+}
+
+/* Header styles */
+h1 {
+  text-align: center;
+  color: #333;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Flexbox layout for main sections */
+.main-layout {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+/* Left side (Import Contacts) */
+.left-side {
+  flex: 1;
+}
+
+.import-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+input[type="file"] {
+  padding: 5px;
+  background-color: #fff;
+  flex-grow: 2;
+  margin-right: 10px;
+}
+
+button.import-btn {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button.import-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Right side (All Contacts and Find Duplicates) */
+.right-side {
+  flex: 2;
+  /* Give more space to the right side for the contact list */
+  text-align: right;
+}
+
+.contacts-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.find-duplicates-btn {
+  padding: 10px 15px;
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.find-duplicates-btn:hover {
+  background-color: #c82333;
+}
+
+/* All Contacts section */
+.contact-list {
+  margin-top: 30px;
+  max-height: 400px;
+  /* Limit the height to allow scrolling */
+  overflow-y: auto;
+  /* Enable vertical scrolling */
+}
+
+.contact-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.contact-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #fff;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.contact-list li span {
+  font-size: 16px;
+  color: #333;
+}
+
+.contact-list li .action-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+/* Button styles */
+button {
+  padding: 12px 20px;
+  margin: 10px 5px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+button.add-btn {
+  background-color: #28a745;
+  color: #fff;
+}
+
+button.export-btn {
+  background-color: #0056b3;
+  color: #fff;
+}
+
+button.edit-btn {
+  background-color: #007bff;
+  color: #fff;
+}
+
+button.delete-btn {
+  background-color: #e3342f;
+  color: #fff;
+}
+
+/* Input fields */
+input[type="text"],
+input[type="email"],
+input[type="file"] {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+  background-color: #f0f0f0;
+}
+
+input[type="file"] {
+  padding: 5px;
+  background-color: #fff;
+}
+
+/* Duplicate Section */
+.duplicates {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+  padding: 15px;
+  margin-top: 20px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+/* Search bar */
+input[type="text"].search-bar {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 2px solid #007bff;
+  border-radius: 5px;
+}
+
+/* Media queries for responsive design */
+@media (max-width: 768px) {
+  .main-layout {
+    flex-direction: column;
+  }
+
+  .right-side {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  button {
+    width: 100%;
+    margin: 5px 0;
+  }
+
+  .contact-list li {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
